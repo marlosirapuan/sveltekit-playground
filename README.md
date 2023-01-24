@@ -1,7 +1,7 @@
 # sveltekit-playground
 
 ## Overview
-Small project to test SvelteKit with Tailwind. Deploy at Amazon S3: http://svelte-first-test.s3-website-us-west-1.amazonaws.com/todo
+Small project to test SvelteKit with Tailwind. Deploy at Amazon S3: http://svelte-first-test.s3-website-us-west-1.amazonaws.com
 
 ## Developing
 
