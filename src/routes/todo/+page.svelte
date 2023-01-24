@@ -31,10 +31,10 @@
 	$: todoListCount = todoList.length
 </script>
 
-<form on:submit="{addToList}">
+<form on:submit={addToList}>
 	<div class="p-4">
 		<input
-			bind:value="{newItem}"
+			bind:value={newItem}
 			type="text"
 			placeholder="new todo item"
 			required
@@ -54,21 +54,21 @@
 		{#each todoList as item, index}
 			<div class="flex items-center">
 				<input
-					bind:checked="{item.status}"
-					id="{`checked-checkbox-${index}`}"
+					bind:checked={item.status}
+					id={`checked-checkbox-${index}`}
 					type="checkbox"
 					value=""
 					class="dark:focus:ring-blue-600`} h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-gray-800"
 				/>
 				<label
-					for="{`checked-checkbox-${index}`}"
-					class="{`${
+					for={`checked-checkbox-${index}`}
+					class={`${
 						item.status && 'checked'
-					} ml-2 text-sm font-medium text-gray-900 dark:text-gray-300`}"
+					} ml-2 text-sm font-medium text-gray-900 dark:text-gray-300`}
 				>
 					{item.text}
 				</label>
-				<button on:click="{() => removeFromList(index)}">💥</button>
+				<button on:click={() => removeFromList(index)}>💥</button>
 			</div>
 		{:else}
 			<span>No tasks</span>
