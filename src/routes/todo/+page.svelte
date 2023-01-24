@@ -70,6 +70,8 @@
 				</label>
 				<button on:click="{() => removeFromList(index)}">💥</button>
 			</div>
+		{:else}
+			<span>No tasks</span>
 		{/each}
 	</div>
 
